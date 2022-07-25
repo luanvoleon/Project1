@@ -12,6 +12,7 @@ var diceRoll = function () {
   return 1;
 };
 
+//Using main function to get username and switch to normal mode
 var main = function (input) {
   if (currentMode == `Please input your name.`) {
     userName = input;
@@ -22,6 +23,7 @@ var main = function (input) {
   }
 };
 
+//The normal mode
 var stonePaperScissors = function (userName, userGuess) {
   var myOutputValue = ``;
   var diceNumbers = diceRoll();
@@ -40,7 +42,7 @@ var stonePaperScissors = function (userName, userGuess) {
     computerHand = `scissors`;
   }
 
-  //Reversed mode activator
+  //Reversed mode activator. I don't remember why I put this thing here but probably because I need to go into normal mode first
   if (userGuess == `reversed`) {
     gameMode = `reversed mode`;
     console.log(`reversed mode`);
